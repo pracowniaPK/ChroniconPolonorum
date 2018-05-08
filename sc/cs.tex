@@ -1,0 +1,149 @@
+\documentclass{article}
+
+    \usepackage[utf8]{inputenc}
+    \usepackage{polski}
+    \usepackage{amsmath}
+    \usepackage{graphicx} % rysuneczki
+    \selecthyphenation{polish}
+
+    \title{Ściąga}
+    \author{PK}
+
+\begin{document}
+
+    \maketitle
+
+\section{Good Moaning!}
+
+    {\rm I shall} \textrm{say it only once.}
+
+    {\bf I shall} \textbf{say it only once.}
+
+    {\it I shall} \textit{say it only once.}
+
+    {\tt I shall} \texttt{say it only once.}
+
+    {\sl I shall} \textsl{say it only once.}
+
+    {\sf I shall} \textsf{say it only once.}
+    
+    {\em I shall} \emph{ say it only once.}
+
+    \textnormal{I shall say it only once.}
+
+% \pagebreak
+\section{Formuły}
+
+    \begin{equation}
+        E = mc^2 \;
+        \label{eqn:clever}
+    \end{equation}
+
+    \begin{equation}
+        \text{cov} (X,Y) = 
+        \frac{\sum_{i=1}^n (x_i - \overline{x})(y_i - \overline{y})}
+        {[\sum_{i=1}^n (x_i - \overline{x})^2 \sum_{i=1}^n (y_i - \overline{y})^2]^{1/2}}
+    \end{equation}
+
+    \begin{equation}
+        F(a,b) = 
+        \frac{\lim_{x \rightarrow \infty} \frac{x^3}{\sqrt[15]{1 - x} } + \sum_{i=1}^n \ln a_i}
+        {\iint_0^{\infty} \; \sin (a) \, \cos (b) \mathrm{d}a \mathrm{d}b}
+    \end{equation}
+
+\section{Rysunki}
+
+    \mbox{Tekst taki długi że aż się nie mieści w linijce, jeszce trochę w prawo, keszcze parę słów, jeszcze kawałek i nic nie widać}
+
+    Rysunki robione przy pomocy \LaTeX{}-a
+
+    \begin{figure}[h]
+        \centering
+        \setlength{\unitlength}{1cm}
+        \begin{picture}(10,5)(0,0)
+            \put( 0,0){\circle*{0.2}}
+            \put(10,0){\circle*{0.2}}
+            \put(10,5){\circle*{0.2}}
+            \put( 0,5){\circle*{0.2}}
+
+            \put(5,2.5){\circle{1.4}}
+            \put(9,2.5){\vector(-1,0){3}}
+            \put(6,2.8){$ \text{Koło o średnicy 14 mm} $}
+            \thinlines
+        \end{picture}
+        \caption{
+            Obrazek 10 cm na 5 cm.
+        } 
+    \end{figure}
+
+    \begin{figure}[h]
+        \centering
+        \setlength{\unitlength}{1cm}
+        \begin{picture}(6,3)(0,0)
+            \put(0,0){\circle*{0.2}}
+            \put(6,0){\circle*{0.2}}
+            \put(6,3){\circle*{0.2}}
+            \put(0,3){\circle*{0.2}}
+
+            \put(1,1){\line(1,0){4}}
+            \put(1,1){\line(4,1){4}}
+            \put(5,1){\line(0,1){1}}
+            \put(5.1,1){$ \text{A} $}
+            \put(5.1,2){$ \text{B} $}
+            \put(0.7,1){$ \text{C} $}
+            \thinlines
+        \end{picture}
+        \caption{
+            Obrazek 6 cm na 3 cm.
+        } 
+    \end{figure}
+
+\section{Tabele}
+
+    \listoftables   
+
+    Tabele i spis tabel
+
+    \begin{table}[h!]
+        \caption[Niektóre stolice europejskie]{
+            \label{tab.stolice}    
+            Niektóre stolice europejskie. I rzeki też.
+        }
+        \centering
+        \begin{tabular}{||l|l|l||}
+            \hline\hline
+            Panstwo   & Stolica  & Rzeka \\ \hline
+            Polska    & Warszawa & Wisła \\
+            Wlochy    & Rzym     & Tybr \\
+            Francja   & Paryz    & Sekwana \\
+            Finlandia & Helsinki & Amazonka \\
+            \hline\hline
+        \end{tabular}
+    \end{table}
+
+    \begin{table}[h!]
+        \caption[Cechy morfologiczne kotowatych]{
+            \label{tab.kotki}    
+            Cechy morfologiczne wybranych gatunków kotowatych – cztery cechy
+        }
+        \centering
+        \begin{tabular}{||l|c|c|c|c||}
+            \hline\hline
+            Kot & \multicolumn{4}{c|}{Cechy} \\ \hline
+            Płeć & \multicolumn{2}{c|}{Samce} & \multicolumn{2}{c|}{Samice} \\ \hline
+            Gatunek & Masa [kg] & Długosc [cm] & Masa [kg] & Długosc [cm] \\ \hline \hline
+            Gepard & 53 & 230 & 38 & 220 \\ \hline
+            Karakal & 16 & 100 & 12 & 90 \\ \hline
+            Mormi & 15 & 150 & 10 & 120 \\ \hline\hline
+        \end{tabular}
+    \end{table}
+
+\section{Cytowania}
+
+Książka \cite{82_Ballard} i artykuł \cite{Lukac2005}.
+I jeszcze jeden\cite{Bator2008}.
+
+\bibliographystyle{alpha}
+\bibliography{bibl} 
+
+\end{document}
